@@ -1,0 +1,68 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 10px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  width: 70px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.btn-primary{
+  background-color: #797DFC;
+  color:white;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+
+.section-title{
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  color: #12132D;
+  font-weight: 900;
+  text-align: center;
+}
+
+.primary-text{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: #12132D;
+  text-align: center;
+
+}
+
+
+.input-wrapper { 
+  position: relative; 
+  display: inline-block; 
+} 
+
+.input-wrapper input { 
+  padding-right: 40px; 
+} 
+
+.input-wrapper button { 
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+  border: none; 
+  cursor: pointer; 
+} 
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS and DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/stylesheet.css">
+
+    <!-- Font Mulish -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <title>ReTro Forum</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="mx-auto my-5 container">
+        <!-- Navbar -->
+        <nav>
+            <div class="flex justify-between my-5 items-center">
+                <h2 class="text-3xl font-bold">ReTro</h2>
+                <div class="flex gap-3 ">
+                    <a class="tooltip" href=""><span class="tooltip-text">Home</span><img class=" h-11"
+                            src="images/Frame 2.png" alt=""></a>
+                    <a class="tooltip" href=""><span class="tooltip-text">Create Post</span><img class=" h-11"
+                            src="images/Frame 3.png" alt=""></a>
+                    <a class="tooltip" href=""><span class="tooltip-text">Friends</span><img class=" h-11"
+                            src="images/Frame 4.png" alt=""></a>
+                    <a class="tooltip" href=""><span class="tooltip-text">Saved</span><img class=" h-11"
+                            src="images/Frame 5.png" alt=""></a>
+
+                    <button class="btn-primary"> Sign in</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar ends -->
+        <!-- Banner -->
+        <section class=" ">
+            <div class="rounded-3xl  min-h-screen bg-no-repeat bg-[#12132D] bg-center bg-cover"
+                style="background-image: url(./images/bgbanner.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class=" text-neutral-content flex items-center justify-center ">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">Welcome to the ReTro Forum</h1>
+                        <p class="mb-5">Share your favorite opinion and win and wp forum coffee mug!</p>
+                        <div class="input-wrapper ">
+                            <textarea class="rounded-xl p-4" rows="1" cols="40">Search here anything</textarea>
+                            <button class=" btn-primary">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="max-w-md p-10 bg-white rounded-xl">
+                        <table class="">
+                            <tr>
+                                <td>Registered Users</td>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <td>Forum</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>Topics</td>
+                                <td>09</td>
+                            </tr>
+                            <tr>
+                                <td>Replies</td>
+                                <td>06</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner ends -->
+        <section class="diiscuss my-12 ">
+            <h2 class="section-title text-4xl my-2 ">Let’s Discuss</h2>
+            <p class="primary-text">Yes, you can run unit tests and view the results directly within the app. The
+                integrated testing features allow for a streamlined .</p>
+
+            <div class="flex gap-4">
+                <div class="content flex gap-10 my-6 mt-10 bg-[#F3F3F5] p-8 rounded-xl">
+                    <img src="./images/logo.png" alt="">
+                    <div>
+                        <div class="flex gap-4 mt-4">
+                            <p>#Music</p>
+                            <p>Author:Awlad hossain</p>
+                        </div>
+                        <h2 class="text-2xl mt-4">10 Kids Unaware of Their Halloween Costume</h2>
+                        <p class="mt-6 mb-4">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+                        <hr>
+                        <div class="flex items-center mt-4 gap-6 ">
+                            <div class="flex items-center gap-4">
+                                <img src="./images/Vector (1).png" alt="">
+                                <p>560</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="./images/Vector (2).png" alt="">
+                                <p>1,232</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="./images/Vector (3).png" alt="">
+                                <p>5 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sidebar p-10 bg-[#F3F3F5] rounded-xl">
+                    <div class="flex justify-between">
+                        <h2 class="text-xl">Title</h2>
+                        <p>Mark as read(4)</p>
+                    </div>
+                    <div class="flex gap-4 bg-[#FFFFFF] p-6 rounded-xl">
+                        <p>10 Kids Unaware of Their Halloween Costume</p>
+                        <div class="flex gap-4 items-center">
+                            <img src="./images/Vector (2).png" alt="">
+                            <p>1,232</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forum flex bg-[#12132D] rounded-xl p-10 text-white">
+            <div class="items-center my-20">
+                <h2 class="text-4xl my-4">Join Our Forum</h2>
+                <p class="my-4">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+                <button class=" my-4 btn-primary">Registered Now</button>
+            </div>
+            <img src="./images/joinforum.png" alt="">
+        </section>
+
+        <section class="latest-posts my-10">
+            <h2 class="section-title text-4xl">Latest Posts</h2>
+            <p class="primary-text">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            <div class="border border-[#12132D] rounded-xl p-6">
+                <img src="./images/logo.png" alt="" class="my-4">
+                <div class="flex gap-2 items-center my-4">
+                    <img src="./images/Vector (3).png" alt="">
+                    <p class="my-4">29 January 2024</p>
+
+                </div>
+                <p class="my-4">What will a mars habitat force that impact in our daily life!!!</p>
+                <p class="my-4">Yes, you can run unit tests and view the results directly within the app. </p>
+                <div class="flex gap-4">
+                    <img src="./images/logo.png" alt="">
+                    <div class="my-4">
+                        <p>Cameron Williamson</p>
+                        <p>Unknown</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Footer -->
+    <footer class="bg-[#F3F3F5] text-center justify-center items-center">
+        <h2 class="section-title">ReTro</h2>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+        <div class="flex gap-4">
+            <img src="./images/facebook.png" alt="">
+            <img src="./images/github.png" alt="">
+            <img src="./images/instagram.png" alt="">
+            <img src="./images/twitter.png" alt="">
+        </div>
+        <hr>
+        <p>2017, All Rights Reserved.</p>
+    </footer>
+    <!-- Footer ends -->
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
