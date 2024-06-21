@@ -9,7 +9,10 @@ const loadPosts = async () => {
         // div.classList.add("grid grid-cols-3	")
         div.innerHTML = `
         <div class="content flex gap-10 my-6 mt-10 bg-[#F3F3F5] p-8 rounded-3xl">
-                    <img class="w-20 h-20" src=${item.image} alt="">
+                    
+                    <div class= "avatar ${item.isActive===true? "online": "offline"} w-20 h-20">
+                        <img class=" " src=${item.image} alt="">
+                    </div>
                     <div>
                         <div class="flex gap-4 mt-4">
                             <p>#${item.category}</p>
@@ -31,7 +34,7 @@ const loadPosts = async () => {
                                 <img src="./images/Vector (3).png" alt="">
                                 <p>${item.posted_time}</p>
                             </div>
-                            <button class ="ml-72"><img src="./images/Vector (1) copy.png" alt=""></button>
+                            <button onclick="handleRead('${item.title}','${item.view_count}')" class ="ml-72"><img src="./images/Vector (1) copy.png" alt=""></button>
                             </div>
                     </div>
                 </div>
@@ -60,7 +63,7 @@ const latestPosts = async() =>{
                 <p class="my-4">${item.title}</p>
                 <p class="my-4">${item.description}</p>
                 <div class="flex gap-4">
-                                        <img class="w-[44px] h-[44px] rounded-full" src=${item.profile_image} alt="">
+                    <img class="w-[44px] h-[44px] rounded-full" src=${item.profile_image} alt="">
                     <div class="my-4">
                         <p>${item.author.name}</p>
                         <p>${item.author.designation? item.author.designation:"Unknown"}</p>
@@ -73,6 +76,30 @@ const latestPosts = async() =>{
     })
 }
 
+const handleRead = (name,count) =>{
+    console.log(name, count);
+    const readContainer = document.getElementById('sidebar')
+    const div = document.createElement('div')
+
+    const counting  = getConvertedValue('cart-count')
+    document.getElementById('cart-count').innerText = counting +1
+
+    
+    div.innerHTML=`
+    <div class="flex justify-between">
+                        
+                    </div>
+                    <div class="flex gap-4 bg-[#FFFFFF] p-6 rounded-xl">
+                        <p>Title: ${name}</p>
+                        <div class="flex gap-4 items-center">
+                            <img src="./images/Vector (2).png" alt="">
+                            <p>${count}</p>
+                        </div>
+                    </div>
+    `
+    readContainer.appendChild(div)
+
+}
 
 const handleSearch = async () => {
     document.getElementById('loading-spinner').style.display = "block"
@@ -118,7 +145,7 @@ const handleSearch = async () => {
                                     <img src="./images/Vector (3).png" alt="">
                                     <p>${item.posted_time}</p>
                                 </div>
-                                <button class ="ml-72"><img src="./images/Vector (1) copy.png" alt=""></button>
+                                    <button onclick="handleRead('${item.title}','${item.view_count}')" class ="ml-72"><img src="./images/Vector (1) copy.png" alt=""></button>
                                 </div>
                         </div>
                     </div>
@@ -126,11 +153,15 @@ const handleSearch = async () => {
         allPostsContainer.appendChild(div)
     });
 
-
-
-
 }
 
+
+
+function getConvertedValue(id) {
+    const value = document.getElementById(id).innerText;
+    const convertedValue = parseInt(value);
+    return convertedValue;
+}
 
 loadPosts()
 latestPosts()
