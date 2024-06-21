@@ -66,3 +66,7 @@
   cursor: pointer; 
 } 
 
+.spinner{
+text-align: center;
+display: none;
+}
