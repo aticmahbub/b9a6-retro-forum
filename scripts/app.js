@@ -34,7 +34,7 @@ const loadPosts = async () => {
                                 <img src="./images/Vector (3).png" alt="">
                                 <p>${item.posted_time}</p>
                             </div>
-                            <button onclick="handleRead('${item.title}','${item.view_count}')" class ="ml-72 w-[24px]"><img class="" src="./images/Vector (1) copy.png" alt=""></button>
+                            <button onclick="handleRead('${item.title}','${item.view_count}')" class ="lg:ml-72 w-[24px]"><img class="" src="./images/Vector (1) copy.png" alt=""></button>
                             </div>
                     </div>
                 </div>
