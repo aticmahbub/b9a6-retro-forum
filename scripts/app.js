@@ -8,20 +8,20 @@ const loadPosts = async () => {
         const div = document.createElement("div")
         // div.classList.add("grid grid-cols-3	")
         div.innerHTML = `
-        <div class="content flex gap-10 my-6 mt-10 bg-[#F3F3F5] p-8 rounded-3xl">
+        <div class="content flex gap-10  mt-10 bg-[#F3F3F5] p-8 rounded-3xl">
                     
-                    <div class= "avatar ${item.isActive===true? "online": "offline"} w-20 h-20">
-                        <img class=" " src=${item.image} alt="">
+                    <div class= "avatar  ${item.isActive===true? "online": "offline"} w-20 h-20">
+                        <img class=" rounded-xl" src=${item.image} alt="">
                     </div>
                     <div>
-                        <div class="flex gap-4 mt-4">
-                            <p>#${item.category}</p>
-                            <p>Author: ${item.author.name}</p>
+                        <div class="flex gap-6 mt-4">
+                            <p class="text-base">#${item.category}</p>
+                            <p  class="text-base">Author: ${item.author.name}</p>
                         </div>
-                        <h2 class="text-2xl mt-4">${item.title}</h2>
-                        <p class="mt-6 mb-4">${item.description}</p>
+                        <h2 class="text-xl font-bold mt-4">${item.title}</h2>
+                        <p class="mt-6 mb-4 primary-text text-left">${item.description}</p>
                         <hr>
-                        <div class="flex items-center mt-4 gap-6 ">
+                        <div class="flex items-center mt-4 gap-10 ">
                             <div class="flex items-center gap-4">
                                 <img src="./images/Vector (1).png" alt="">
                                 <p>${item.comment_count}</p>
@@ -34,7 +34,7 @@ const loadPosts = async () => {
                                 <img src="./images/Vector (3).png" alt="">
                                 <p>${item.posted_time}</p>
                             </div>
-                            <button onclick="handleRead('${item.title}','${item.view_count}')" class ="ml-72"><img src="./images/Vector (1) copy.png" alt=""></button>
+                            <button onclick="handleRead('${item.title}','${item.view_count}')" class ="ml-72 w-[24px]"><img class="" src="./images/Vector (1) copy.png" alt=""></button>
                             </div>
                     </div>
                 </div>
@@ -44,37 +44,7 @@ const loadPosts = async () => {
 }
 
 
-const latestPosts = async() =>{
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
-    const data = await res.json()
-    console.log(data);
-    const latestPostsContainer = document.getElementById('latest-posts')
 
-    data.forEach(item =>{
-        const div = document.createElement('div')
-        div.innerHTML=`
-         <div id="" class="border border-[#12132DB3]  rounded-xl p-6">
-        <img class="w-[326px] h-[190px]" src=${item.cover_image}">
-                <div class="flex gap-2 items-center my-4">
-                <img src="./images/calender.png" alt="">
-                    <p class="primary-text my-4">${item.author.posted_date? item.author.posted_date:"No publish date"}</p>
-
-                </div>
-                <p class="my-4 text-2xl font-bold">${item.title}</p>
-                <p class="my-4 text-left primary-text">${item.description}</p>
-                <div class="flex gap-4">
-                    <img class="w-[44px] h-[44px] rounded-full" src=${item.profile_image} alt="">
-                    <div class="my-4">
-                        <p class="text-base font-bold">${item.author.name}</p>
-                        <p class="text-left primary-text">${item.author.designation? item.author.designation:"Unknown"}</p>
-                    </div>
-                </div>
-                </div>
-        `
-        latestPostsContainer.appendChild(div)
-        
-    })
-}
 
 const handleRead = (name,count) =>{
     console.log(name, count);
@@ -89,8 +59,8 @@ const handleRead = (name,count) =>{
     <div class="flex justify-between">
                         
                     </div>
-                    <div class="flex gap-4 bg-[#FFFFFF] p-6 rounded-xl">
-                        <p>Title: ${name}</p>
+                    <div class="flex my-2 bg-[#FFFFFF] p-6 rounded-xl">
+                        <p> ${name}</p>
                         <div class="flex gap-4 items-center">
                             <img src="./images/Vector (2).png" alt="">
                             <p>${count}</p>
@@ -155,6 +125,38 @@ const handleSearch = async () => {
 
 }
 
+
+const latestPosts = async() =>{
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    const data = await res.json()
+    console.log(data);
+    const latestPostsContainer = document.getElementById('latest-posts')
+
+    data.forEach(item =>{
+        const div = document.createElement('div')
+        div.innerHTML=`
+         <div id="" class="border border-[#12132DB3]  rounded-xl p-6">
+        <img class="w-[326px] h-[190px]" src=${item.cover_image}">
+                <div class="flex gap-2 items-center my-4">
+                <img src="./images/calender.png" alt="">
+                    <p class="primary-text my-4">${item.author.posted_date? item.author.posted_date:"No publish date"}</p>
+
+                </div>
+                <p class="my-4 text-2xl font-bold">${item.title}</p>
+                <p class="my-4 text-left primary-text">${item.description}</p>
+                <div class="flex items-center gap-4">
+                    <img class="w-[44px] h-[44px] rounded-full" src=${item.profile_image} alt="">
+                    <div class=" my-4">
+                        <p class="text-base font-bold">${item.author.name}</p>
+                        <p class="text-left primary-text">${item.author.designation? item.author.designation:"Unknown"}</p>
+                    </div>
+                </div>
+                </div>
+        `
+        latestPostsContainer.appendChild(div)
+        
+    })
+}
 
 
 function getConvertedValue(id) {
