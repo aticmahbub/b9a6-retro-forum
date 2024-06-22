@@ -35,6 +35,7 @@
 .section-title{
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
+  font-size: 40px;
   color: #12132D;
   font-weight: 900;
   text-align: center;
@@ -43,7 +44,7 @@
 .primary-text{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  color: #12132D;
+  color: #12132DB3;
   text-align: center;
 
 }

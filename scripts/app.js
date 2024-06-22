@@ -53,20 +53,20 @@ const latestPosts = async() =>{
     data.forEach(item =>{
         const div = document.createElement('div')
         div.innerHTML=`
-         <div id="" class="border border-[#12132D] rounded-xl p-6">
+         <div id="" class="border border-[#12132DB3]  rounded-xl p-6">
         <img class="w-[326px] h-[190px]" src=${item.cover_image}">
                 <div class="flex gap-2 items-center my-4">
-                <img src="./images/logo.png" alt="">
-                    <p class="my-4">${item.author.posted_date? item.author.posted_date:"No publish date"}</p>
+                <img src="./images/calender.png" alt="">
+                    <p class="primary-text my-4">${item.author.posted_date? item.author.posted_date:"No publish date"}</p>
 
                 </div>
-                <p class="my-4">${item.title}</p>
-                <p class="my-4">${item.description}</p>
+                <p class="my-4 text-2xl font-bold">${item.title}</p>
+                <p class="my-4 text-left primary-text">${item.description}</p>
                 <div class="flex gap-4">
                     <img class="w-[44px] h-[44px] rounded-full" src=${item.profile_image} alt="">
                     <div class="my-4">
-                        <p>${item.author.name}</p>
-                        <p>${item.author.designation? item.author.designation:"Unknown"}</p>
+                        <p class="text-base font-bold">${item.author.name}</p>
+                        <p class="text-left primary-text">${item.author.designation? item.author.designation:"Unknown"}</p>
                     </div>
                 </div>
                 </div>
