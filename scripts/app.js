@@ -8,13 +8,13 @@ const loadPosts = async () => {
         const div = document.createElement("div")
         // div.classList.add("grid grid-cols-3	")
         div.innerHTML = `
-        <div class="content flex gap-10  mt-10 bg-[#F3F3F5] p-8 rounded-3xl">
+        <div class="content lg:flex gap-10  mt-10 bg-[#F3F3F5] p-4 lg:p-8 rounded-3xl">
                     
                     <div class= "avatar  ${item.isActive===true? "online": "offline"} w-20 h-20">
                         <img class=" rounded-xl" src=${item.image} alt="">
                     </div>
                     <div>
-                        <div class="flex gap-6 mt-4">
+                        <div class="lg:flex gap-6 mt-4">
                             <p class="text-base">#${item.category}</p>
                             <p  class="text-base">Author: ${item.author.name}</p>
                         </div>
